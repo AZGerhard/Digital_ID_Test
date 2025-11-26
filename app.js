@@ -7,7 +7,7 @@ async function loadProduct() {
     const key = getKeyFromUrl();
     if(!key) return;
 
-    const url = `/data/produkt_${key}.json`;
+    const url = `data/produkt_${key}.json`;
     try {
         const res = await fetch(url);
         const data = await res.json();
