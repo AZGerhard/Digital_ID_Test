@@ -34,3 +34,12 @@ async function loadProduct() {
         document.body.innerHTML = "<h2>Produkt nicht gefunden</h2>";
     }
 }
+
+function togglePdf() {
+  const container = document.getElementById("pdf-container");
+  if(container.style.maxHeight && container.style.maxHeight !== "0px") {
+    container.style.maxHeight = "0px";
+  } else {
+    container.style.maxHeight = container.scrollHeight + "px";
+  }
+}

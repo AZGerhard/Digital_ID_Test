@@ -1,32 +1,33 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Produktdetail</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body onload="loadProduct()">
-<div class="container">
-    <img id="produktbild" src="" alt="Produktbild">
+<div class="card">
+  <img id="produktbild" src="" alt="Produktbild" class="produkt-img">
+  <div class="card-content">
     <h1 id="typ"></h1>
-    <p><strong>Abdichtung:</strong> <span id="abdichtung"></span></p>
-    <p><strong>Anschluss:</strong> <span id="anschluss"></span></p>
-    <p><strong>Dichtleiste:</strong> <span id="dichtleiste"></span></p>
-    <p><strong>Nennweite:</strong> <span id="nennweite"></span></p>
-    <p><strong>Nenndruck:</strong> <span id="nenndruck"></span></p>
-    <p><strong>Baulänge:</strong> <span id="baulaenge"></span></p>
-    <p><strong>Werkstoffe:</strong></p>
-    <ul>
+    <ul class="produkt-info">
+      <li><strong>Abdichtung:</strong> <span id="abdichtung"></span></li>
+      <li><strong>Anschluss:</strong> <span id="anschluss"></span></li>
+      <li><strong>Dichtleiste:</strong> <span id="dichtleiste"></span></li>
+      <li><strong>Nennweite:</strong> <span id="nennweite"></span></li>
+      <li><strong>Nenndruck:</strong> <span id="nenndruck"></span></li>
+      <li><strong>Baulänge:</strong> <span id="baulaenge"></span></li>
+    </ul>
+
+    <div class="werkstoffe">
+      <h2>Werkstoffe</h2>
+      <ul>
         <li>Gehäuse: <span id="gehaeuse"></span></li>
         <li>Küken: <span id="kueken"></span></li>
         <li>Deckel: <span id="deckel"></span></li>
-    </ul>
-    <p><strong>Dichtbuchse:</strong> <span id="dichtbuchse"></span></p>
-    <p><strong>Schrauben:</strong> <span id="schrauben"></span></p>
+      </ul>
+    </div>
 
-    <p><a id="pdf-link" href="" target="_blank">PDF Datenblatt herunterladen</a></p>
+    <ul class="zusatz-info">
+      <li><strong>Dichtbuchse:</strong> <span id="dichtbuchse"></span></li>
+      <li><strong>Schrauben:</strong> <span id="schrauben"></span></li>
+    </ul>
+
+    <button class="toggle-pdf" onclick="togglePdf()">Datenblatt anzeigen ↓</button>
+    <div id="pdf-container" class="pdf-container">
+      <a id="pdf-link" href="" target="_blank">PDF öffnen</a>
+    </div>
+  </div>
 </div>
-<script src="app.js"></script>
-</body>
-</html>
