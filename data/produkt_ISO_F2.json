@@ -1,0 +1,19 @@
+{
+  "key": "ISO_F2",
+  "typ": "ISO-F2",
+  "abdichtung": "NEU Fire-Safe-Ausführung Typ „FS2“ ISO 15848-1 / TA-Luft 2021",
+  "anschluss": "Flansch",
+  "dichtleiste": "DIN EN 1092-1 Form B1",
+  "nennweite": "DN 25",
+  "nenndruck": "PN 40",
+  "baulaenge": "DIN EN 558-1 160 mm",
+  "werkstoffe": {
+    "gehaeuse": "Edelstahl 1.4408 / A351 CF8M / 316",
+    "kueken": "Edelstahl 1.4408 / A351 CF8M / 316",
+    "deckel": "Edelstahl 1.4408 / A351 CF8M / 316"
+  },
+  "dichtbuchse": "PTFE",
+  "schrauben": "A4-70",
+  "bild": "/img/iso-f2.svg",
+  "pdf": "/files/iso_f2_datenblatt.pdf"
+}
