@@ -7,10 +7,12 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body onload="loadProduct()">
+
 <div class="card">
   <img id="produktbild" src="" alt="Produktbild" class="produkt-img">
   <div class="card-content">
-    <h1 id="typ"></h1>
+    <h1 id="typ" class="product-title"></h1>
+
     <ul class="produkt-info">
       <li><strong>Abdichtung:</strong> <span id="abdichtung"></span></li>
       <li><strong>Anschluss:</strong> <span id="anschluss"></span></li>
@@ -20,8 +22,8 @@
       <li><strong>Baulänge:</strong> <span id="baulaenge"></span></li>
     </ul>
 
-    <div class="werkstoffe">
-      <h2>Werkstoffe</h2>
+    <button class="accordion">Werkstoffe anzeigen ▼</button>
+    <div class="panel">
       <ul>
         <li>Gehäuse: <span id="gehaeuse"></span></li>
         <li>Küken: <span id="kueken"></span></li>
@@ -34,12 +36,28 @@
       <li><strong>Schrauben:</strong> <span id="schrauben"></span></li>
     </ul>
 
-    <button class="toggle-pdf" onclick="togglePdf()">Datenblatt anzeigen ↓</button>
+    <button class="toggle-pdf" onclick="togglePdf()">PDF Datenblatt anzeigen ↓</button>
     <div id="pdf-container" class="pdf-container">
       <a id="pdf-link" href="" target="_blank">PDF öffnen</a>
     </div>
   </div>
 </div>
+
 <script src="app.js"></script>
+<script>
+  // Accordion für Werkstoffe
+  const acc = document.getElementsByClassName("accordion");
+  for (let i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      const panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
 </body>
 </html>
